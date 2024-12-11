@@ -1,0 +1,14 @@
+version: '3'
+services:
+  filters:
+    image: zorranschool/it3300finalfilter
+    container_name: filters
+    ports:
+      - "8877:8877"
+  frontend:
+    image: zorranschool/it3300finalfrontend
+    container_name: frontend
+    ports:
+      - "5000:5000"
+    depends_on:
+      - filters

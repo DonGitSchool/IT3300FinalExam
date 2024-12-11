@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-frontend-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: flask-frontend
+  template:
+    metadata:
+      labels:
+        app: flask-frontend
+    spec:
+      containers:
+      - name: flask-frontend
+        image: zorranschool/it3300finalfrontend
+        ports:
+        - containerPort: 5000

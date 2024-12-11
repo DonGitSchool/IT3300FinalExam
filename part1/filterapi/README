@@ -1,0 +1,9 @@
+This is an attempt to receive a language and a string and then return the string in that language.  
+
+It should work like:
+
+curl "http://localhost/translate?language=b1ff&plaintext=hello"
+
+FOr curl to work, you MUST put the URI in quotes.
+
+

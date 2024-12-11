@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: filterapi-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: filterapi
+  template:
+    metadata:
+      labels:
+        app: filterapi
+    spec:
+      containers:
+      - name: filterapi
+        image: zorranschool/it3300finalfilter
+        ports:
+        - containerPort: 8877
